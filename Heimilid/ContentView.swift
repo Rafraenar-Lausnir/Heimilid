@@ -10,10 +10,17 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+// For testing purposes only - can be removed
+      Button {
+        do {
+          try FirebaseAuthManager.shared.signOut()
+//          isLoggedIn = false
+        } catch let err {
+          print("Error logging out: \(err.localizedDescription)")
+        }
+      } label: {
+        Btn(label: "Skrá út")
+      }
     }
     .padding()
   }

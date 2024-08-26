@@ -17,6 +17,7 @@
 		85B450DF2C7D338D00E7E6A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */; };
 		85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */; };
 		85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E42C7D364800E7E6A8 /* TmpStorage.swift */; };
+		85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		85B450E42C7D364800E7E6A8 /* TmpStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpStorage.swift; sourceTree = "<group>"; };
+		85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		85B450C82C7D31B500E7E6A8 /* Heimilid */ = {
 			isa = PBXGroup;
 			children = (
+				85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */,
 				85B450E42C7D364800E7E6A8 /* TmpStorage.swift */,
 				85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */,
 				85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */,
@@ -165,6 +168,7 @@
 				85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */,
 				85B450CC2C7D31B500E7E6A8 /* ContentView.swift in Sources */,
 				85B450CA2C7D31B500E7E6A8 /* HeimilidApp.swift in Sources */,
+				85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

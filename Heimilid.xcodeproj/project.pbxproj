@@ -15,6 +15,8 @@
 		85B450DB2C7D324800E7E6A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 85B450DA2C7D324800E7E6A8 /* FirebaseAuth */; };
 		85B450DD2C7D324800E7E6A8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 85B450DC2C7D324800E7E6A8 /* FirebaseFirestore */; };
 		85B450DF2C7D338D00E7E6A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */; };
+		85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */; };
+		85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E42C7D364800E7E6A8 /* TmpStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		85B450CD2C7D31B700E7E6A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B450D02C7D31B700E7E6A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		85B450E42C7D364800E7E6A8 /* TmpStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		85B450C82C7D31B500E7E6A8 /* Heimilid */ = {
 			isa = PBXGroup;
 			children = (
+				85B450E42C7D364800E7E6A8 /* TmpStorage.swift */,
+				85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */,
 				85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */,
 				85B450C92C7D31B500E7E6A8 /* HeimilidApp.swift */,
 				85B450CB2C7D31B500E7E6A8 /* ContentView.swift */,
@@ -155,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */,
+				85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */,
 				85B450CC2C7D31B500E7E6A8 /* ContentView.swift in Sources */,
 				85B450CA2C7D31B500E7E6A8 /* HeimilidApp.swift in Sources */,
 			);

@@ -9,8 +9,10 @@ import Foundation
 
 struct BankAccount: Codable {
 
-  enum AccountType: Codable {
-    case checking, savings, investing
+  enum AccountType: String, Codable {
+    case checking = "Tékkareikningur"
+    case savings = "Sparnaðarreikningur"
+    case investing = "Fjárfestingareikningur"
   }
 
   let id: String

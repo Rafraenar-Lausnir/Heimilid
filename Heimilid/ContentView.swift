@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @Binding var isLoggedIn: Bool
+
   var body: some View {
     VStack {
 // For testing purposes only - can be removed
       Button {
         do {
           try FirebaseAuthManager.shared.signOut()
-//          isLoggedIn = false
+          isLoggedIn = false
         } catch let err {
           print("Error logging out: \(err.localizedDescription)")
         }
@@ -27,5 +30,5 @@ struct ContentView: View {
 }
 
 #Preview {
-  ContentView()
+  ContentView(isLoggedIn: .constant(true))
 }

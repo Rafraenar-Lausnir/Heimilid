@@ -15,7 +15,7 @@ struct BankAccountsView: View {
     List {
       ForEach(bankAccounts) { bankAccount in
         NavigationLink {
-          Text(bankAccount.title)
+          BankAccountDetailsView(bankAccount: bankAccount)
         } label: {
           HStack {
             VStack {

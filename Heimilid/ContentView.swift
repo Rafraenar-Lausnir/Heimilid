@@ -13,6 +13,7 @@ struct ContentView: View {
   @State private var title: String = ""
   @State private var number: String = ""
   @State private var type: BankAccount.AccountType = .checking
+  @State private var bankAccounts: [BankAccount] = []
 
   var body: some View {
     NavigationStack {
@@ -20,7 +21,7 @@ struct ContentView: View {
           // For testing purposes only - can be removed
 
         NavigationLink {
-          Text("Bankareikningar")
+          BankAccountsView(bankAccounts: $bankAccounts)
         } label: {
           Text("Bankareikningar")
         }
@@ -87,6 +88,19 @@ struct ContentView: View {
       }
     }
     .padding()
+    .onAppear {
+      Task {
+        guard let user = FirebaseAuthManager.shared.fetchSignedInUser() else {
+          print("Error fetching current user!")
+          return
+        }
+        guard let bankAccounts = try? await FirebaseFirestoreManager.shared.fetchAccounts(for: user.uid) else {
+          print("Error fetching bank accounts")
+          return
+        }
+        self.bankAccounts = bankAccounts
+      }
+    }
   }
 }
 

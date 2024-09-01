@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BankAccount: Codable {
+struct BankAccount: Codable, Identifiable {
 
   enum AccountType: String, Codable {
     case checking = "Tékkareikningur"

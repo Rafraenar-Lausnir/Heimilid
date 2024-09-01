@@ -24,6 +24,7 @@
 		85B450F22C7D384300E7E6A8 /* Btn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F02C7D384300E7E6A8 /* Btn.swift */; };
 		85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */; };
 		85B450F82C834CF200E7E6A8 /* BankAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F72C834CF200E7E6A8 /* BankAccounts.swift */; };
+		85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		85B450F02C7D384300E7E6A8 /* Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Btn.swift; sourceTree = "<group>"; };
 		85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		85B450F72C834CF200E7E6A8 /* BankAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccounts.swift; sourceTree = "<group>"; };
+		85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				85B450CB2C7D31B500E7E6A8 /* ContentView.swift */,
 				85B450CD2C7D31B700E7E6A8 /* Assets.xcassets */,
 				85B450CF2C7D31B700E7E6A8 /* Preview Content */,
+				85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */,
 			);
 			path = Heimilid;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */,
 				85B450EA2C7D374300E7E6A8 /* User.swift in Sources */,
 				85B450CC2C7D31B500E7E6A8 /* ContentView.swift in Sources */,
+				85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */,
 				85B450F82C834CF200E7E6A8 /* BankAccounts.swift in Sources */,
 				85B450CA2C7D31B500E7E6A8 /* HeimilidApp.swift in Sources */,
 				85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */,

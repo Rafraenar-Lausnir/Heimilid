@@ -26,6 +26,7 @@
 		85B450F82C834CF200E7E6A8 /* BankAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F72C834CF200E7E6A8 /* BankAccounts.swift */; };
 		85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */; };
 		85B450FC2C84F61200E7E6A8 /* BankAccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */; };
+		85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		85B450F72C834CF200E7E6A8 /* BankAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccounts.swift; sourceTree = "<group>"; };
 		85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountsView.swift; sourceTree = "<group>"; };
 		85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountDetailsView.swift; sourceTree = "<group>"; };
+		85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				85B450E82C7D374300E7E6A8 /* User.swift */,
 				85B450F72C834CF200E7E6A8 /* BankAccounts.swift */,
+				85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */,
 				85B450EF2C7D37DA00E7E6A8 /* LoginViewModel.swift in Sources */,
 				85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */,
+				85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */,
 				85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

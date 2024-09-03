@@ -68,4 +68,14 @@ extension FirebaseFirestoreManager {
     }
     return bankAccounts
   }
+
+  func createTransaction(_ transaction: BankAccountTransaction, for userId: String) throws {
+    guard let documentID = transaction.firestoreID else {
+      throw URLError(.unknown)
+    }
+    try bankAccountCollection(userId)
+      .document(documentID)
+      .collection("transactions")
+      .addDocument(from: transaction, encoder: encoder)
+  }
 }

@@ -43,7 +43,9 @@ extension FirebaseFirestoreManager {
   }
 
   func fetchUser(for userId: String) async throws -> Usr {
-    try await userDocument(userId).getDocument(as: Usr.self, decoder: decoder)
+    let user = try await userDocument(userId).getDocument(as: Usr.self, decoder: decoder)
+    TmpData.shared.user = user
+    return user
   }
 }
 
@@ -51,6 +53,10 @@ extension FirebaseFirestoreManager {
 extension FirebaseFirestoreManager {
   private func bankAccountCollection(_ userId: String) -> CollectionReference {
     userDocument(userId).collection("bank_accounts")
+  }
+
+  private func bankAccountTransactionCollection(_ userId: String, _ document: String) -> CollectionReference {
+    bankAccountCollection(userId).document(document).collection("transactions")
   }
 
   func createNewAccount(_ account: BankAccount, for userId: String) throws {
@@ -75,23 +81,22 @@ extension FirebaseFirestoreManager {
       )
       bankAccounts.append(bankAccount)
     }
+    TmpData.shared.bankAccounts = bankAccounts
     return bankAccounts
   }
 
   func createTransaction(_ transaction: BankAccountTransaction, for userId: String) async throws {
-    guard let documentID = transaction.account.firestoreID else {
+    guard let account = transaction.account, let documentID = account.firestoreID else {
       throw URLError(.unknown)
     }
-    let newStatus = transaction.account.status + transaction.amount
+    let newStatus = account.status + transaction.amount
     let updatedAccountStatus: [String: Any] = [
       "status": newStatus
     ]
     try await bankAccountCollection(userId)
       .document(documentID)
       .updateData(updatedAccountStatus)
-    try bankAccountCollection(userId)
-      .document(documentID)
-      .collection("transactions")
+    try bankAccountTransactionCollection(userId, documentID)
       .addDocument(from: transaction, encoder: encoder)
   }
 }

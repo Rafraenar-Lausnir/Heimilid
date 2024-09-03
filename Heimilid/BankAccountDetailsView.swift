@@ -52,7 +52,7 @@ struct BankAccountDetailsView: View {
           .background(Color("text_color"))
           .foregroundStyle(Color("bg_color"))
           .clipShape(RoundedRectangle(cornerRadius: 10))
-          .keyboardType(.numberPad)
+          .keyboardType(.numbersAndPunctuation)
           Button {
             Task {
               do {
@@ -72,6 +72,7 @@ struct BankAccountDetailsView: View {
                 )
                 try await FirebaseFirestoreManager.shared
                   .createTransaction(newTransaction, for: user.uid)
+                addNewTransactionSheet.toggle()
               } catch let err {
                 print("Error creating bank account: \(err.localizedDescription)")
               }

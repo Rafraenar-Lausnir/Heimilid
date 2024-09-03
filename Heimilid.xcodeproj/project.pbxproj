@@ -27,6 +27,7 @@
 		85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */; };
 		85B450FC2C84F61200E7E6A8 /* BankAccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */; };
 		85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */; };
+		85B451002C879DB500E7E6A8 /* TmpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FF2C879DB500E7E6A8 /* TmpData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountsView.swift; sourceTree = "<group>"; };
 		85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountDetailsView.swift; sourceTree = "<group>"; };
 		85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTransaction.swift; sourceTree = "<group>"; };
+		85B450FF2C879DB500E7E6A8 /* TmpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				85B450CF2C7D31B700E7E6A8 /* Preview Content */,
 				85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */,
 				85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */,
+				85B450FF2C879DB500E7E6A8 /* TmpData.swift */,
 			);
 			path = Heimilid;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				85B450FC2C84F61200E7E6A8 /* BankAccountDetailsView.swift in Sources */,
 				85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */,
 				85B450EF2C7D37DA00E7E6A8 /* LoginViewModel.swift in Sources */,
+				85B451002C879DB500E7E6A8 /* TmpData.swift in Sources */,
 				85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */,
 				85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */,
 				85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */,

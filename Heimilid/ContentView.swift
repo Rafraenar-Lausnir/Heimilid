@@ -76,6 +76,22 @@ struct ContentView: View {
         }
         Divider()
         Button {
+          Task {
+            guard let user = FirebaseAuthManager.shared.fetchSignedInUser() else {
+              print("Error fetching current user!")
+              return
+            }
+            guard let bankAccounts = try? await FirebaseFirestoreManager.shared.fetchAccounts(for: user.uid) else {
+              print("Error fetching bank accounts")
+              return
+            }
+            self.bankAccounts = bankAccounts
+          }
+        } label: {
+          Btn(label: "Endurhlaða gögnum")
+        }
+        Divider()
+        Button {
           do {
             try FirebaseAuthManager.shared.signOut()
             isLoggedIn = false

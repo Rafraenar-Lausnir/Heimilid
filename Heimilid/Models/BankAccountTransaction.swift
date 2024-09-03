@@ -18,7 +18,7 @@ struct BankAccountTransaction: Codable, Identifiable {
   let id: String
   let date: Date
   let title: String
-  let account: BankAccount
+  var account: BankAccount?
   let amount: Int
   let goal: Int
   let type: TransactionType

@@ -63,16 +63,32 @@ extension FirebaseFirestoreManager {
     let documents = snapshot.documents
     var bankAccounts: [BankAccount] = []
     for document in documents {
-      let bankAccount = try document.data(as: BankAccount.self, decoder: decoder)
+      let snapshotData = try document.data(as: BankAccount.self, decoder: decoder)
+      let bankAccount = BankAccount(
+        id: snapshotData.id,
+        firestoreID: document.documentID,
+        title: snapshotData.title,
+        number: snapshotData.number,
+        status: snapshotData.status,
+        goal: snapshotData.goal,
+        type: snapshotData.type
+      )
       bankAccounts.append(bankAccount)
     }
     return bankAccounts
   }
 
-  func createTransaction(_ transaction: BankAccountTransaction, for userId: String) throws {
-    guard let documentID = transaction.firestoreID else {
+  func createTransaction(_ transaction: BankAccountTransaction, for userId: String) async throws {
+    guard let documentID = transaction.account.firestoreID else {
       throw URLError(.unknown)
     }
+    let newStatus = transaction.account.status + transaction.amount
+    let updatedAccountStatus: [String: Any] = [
+      "status": newStatus
+    ]
+    try await bankAccountCollection(userId)
+      .document(documentID)
+      .updateData(updatedAccountStatus)
     try bankAccountCollection(userId)
       .document(documentID)
       .collection("transactions")

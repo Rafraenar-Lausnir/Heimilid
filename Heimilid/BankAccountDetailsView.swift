@@ -54,28 +54,30 @@ struct BankAccountDetailsView: View {
           .clipShape(RoundedRectangle(cornerRadius: 10))
           .keyboardType(.numberPad)
           Button {
-            do {
-              guard let amountNumber = Int(self.amount), let user = FirebaseAuthManager.shared.fetchSignedInUser() else {
-                throw URLError(.unknown)
+            Task {
+              do {
+                guard let amountNumber = Int(self.amount), let user = FirebaseAuthManager.shared.fetchSignedInUser() else {
+                  throw URLError(.unknown)
+                }
+                let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                let id = String((0..<64).map{ _ in letters.randomElement()! })
+                let newTransaction = BankAccountTransaction(
+                  id: id,
+                  date: date,
+                  title: "",
+                  account: bankAccount,
+                  amount: amountNumber,
+                  goal: 0,
+                  type: newTransactionType
+                )
+                try await FirebaseFirestoreManager.shared
+                  .createTransaction(newTransaction, for: user.uid)
+              } catch let err {
+                print("Error creating bank account: \(err.localizedDescription)")
               }
-              let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-              let id = String((0..<64).map{ _ in letters.randomElement()! })
-              let newTransaction = BankAccountTransaction(
-                id: id,
-                date: date,
-                title: "",
-                account: bankAccount,
-                amount: amountNumber,
-                goal: 0,
-                type: newTransactionType
-              )
-              try FirebaseFirestoreManager.shared
-                .createTransaction(newTransaction, for: user.uid)
-            } catch let err {
-              print("Error creating bank account: \(err.localizedDescription)")
             }
           } label: {
-            Btn(label: "Stofna reikning")
+            Btn(label: "Stofna færslu")
           }
         }
       }

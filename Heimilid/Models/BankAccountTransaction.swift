@@ -16,7 +16,6 @@ struct BankAccountTransaction: Codable, Identifiable {
   }
 
   let id: String
-  let firestoreID: String?
   let date: Date
   let title: String
   let account: BankAccount
@@ -26,7 +25,6 @@ struct BankAccountTransaction: Codable, Identifiable {
 
   init(
     id: String,
-    firestoreID: String? = nil,
     date: Date,
     title: String,
     account: BankAccount,
@@ -35,7 +33,6 @@ struct BankAccountTransaction: Codable, Identifiable {
     type: TransactionType
   ) {
     self.id = id
-    self.firestoreID = firestoreID
     self.date = date
     self.title = title
     self.account = account

@@ -16,6 +16,7 @@ struct BankAccount: Codable, Identifiable {
   }
 
   let id: String
+  let firestoreID: String?
   let title: String
   let number: Int
   let status: Int
@@ -24,6 +25,7 @@ struct BankAccount: Codable, Identifiable {
 
   init(
     id: String,
+    firestoreID: String? = nil,
     title: String,
     number: Int,
     status: Int,
@@ -31,6 +33,7 @@ struct BankAccount: Codable, Identifiable {
     type: AccountType
   ) {
     self.id = id
+    self.firestoreID = firestoreID
     self.title = title
     self.number = number
     self.status = status

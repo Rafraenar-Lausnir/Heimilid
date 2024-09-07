@@ -11,13 +11,25 @@ import Firebase
 @main
 struct HeimilidApp: App {
 
+  @State private var isLoggedIn: Bool
+
   init() {
     FirebaseApp.configure()
+    FirebaseAuthManager.shared.fetchSignedInUser()
+    if TmpData.shared.user != nil {
+      self.isLoggedIn = true
+    } else {
+      self.isLoggedIn = false
+    }
   }
 
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      if isLoggedIn {
+        ContentView(isLoggedIn: $isLoggedIn)
+      } else {
+        LoginView(isLoggedIn: $isLoggedIn)
+      }
     }
   }
 }

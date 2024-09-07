@@ -23,7 +23,13 @@ final class FirebaseAuthManager {
     return try await user.reauthenticate(with: credential).user
   }
 
+  @discardableResult
   func fetchSignedInUser() -> User? {
+    let user = auth.currentUser
+    if let user = user {
+      let usr = Usr(user)
+      TmpData.shared.user = usr
+    }
     return auth.currentUser
   }
 
@@ -35,8 +41,7 @@ final class FirebaseAuthManager {
 
     print("Fetched Database user: \(user.uid)")
 
-    TmpStorage.shared.user = user
-//    try FirebaseFirestoreManager.shared.createNewUser(for: Usr(authDataResult.user))
+    TmpData.shared.user = user
   }
 
   func createUser(for email: String) async throws {
@@ -72,7 +77,7 @@ final class FirebaseAuthManager {
 
   func signOut() throws {
     try auth.signOut()
-    TmpStorage.shared.user = nil
+    TmpData.shared.user = nil
   }
 
   func resetPassword(_ credential: AuthCredential, to newPassword: String) async throws {

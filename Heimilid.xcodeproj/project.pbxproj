@@ -16,13 +16,17 @@
 		85B450DD2C7D324800E7E6A8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 85B450DC2C7D324800E7E6A8 /* FirebaseFirestore */; };
 		85B450DF2C7D338D00E7E6A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */; };
 		85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */; };
-		85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E42C7D364800E7E6A8 /* TmpStorage.swift */; };
 		85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */; };
 		85B450EA2C7D374300E7E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E82C7D374300E7E6A8 /* User.swift */; };
-		85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */; };
 		85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450EB2C7D37DA00E7E6A8 /* LoginView.swift */; };
 		85B450EF2C7D37DA00E7E6A8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450EC2C7D37DA00E7E6A8 /* LoginViewModel.swift */; };
 		85B450F22C7D384300E7E6A8 /* Btn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F02C7D384300E7E6A8 /* Btn.swift */; };
+		85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */; };
+		85B450F82C834CF200E7E6A8 /* BankAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F72C834CF200E7E6A8 /* BankAccounts.swift */; };
+		85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */; };
+		85B450FC2C84F61200E7E6A8 /* BankAccountDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */; };
+		85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */; };
+		85B451002C879DB500E7E6A8 /* TmpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FF2C879DB500E7E6A8 /* TmpData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +37,17 @@
 		85B450D02C7D31B700E7E6A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
-		85B450E42C7D364800E7E6A8 /* TmpStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpStorage.swift; sourceTree = "<group>"; };
 		85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreManager.swift; sourceTree = "<group>"; };
 		85B450E82C7D374300E7E6A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		85B450EB2C7D37DA00E7E6A8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		85B450EC2C7D37DA00E7E6A8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		85B450F02C7D384300E7E6A8 /* Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Btn.swift; sourceTree = "<group>"; };
+		85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		85B450F72C834CF200E7E6A8 /* BankAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccounts.swift; sourceTree = "<group>"; };
+		85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountsView.swift; sourceTree = "<group>"; };
+		85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountDetailsView.swift; sourceTree = "<group>"; };
+		85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTransaction.swift; sourceTree = "<group>"; };
+		85B450FF2C879DB500E7E6A8 /* TmpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +88,15 @@
 				85B450ED2C7D37DA00E7E6A8 /* Authentication */,
 				85B450E92C7D374300E7E6A8 /* Models */,
 				85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */,
-				85B450E42C7D364800E7E6A8 /* TmpStorage.swift */,
 				85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */,
 				85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */,
 				85B450C92C7D31B500E7E6A8 /* HeimilidApp.swift */,
 				85B450CB2C7D31B500E7E6A8 /* ContentView.swift */,
 				85B450CD2C7D31B700E7E6A8 /* Assets.xcassets */,
 				85B450CF2C7D31B700E7E6A8 /* Preview Content */,
+				85B450F92C83974D00E7E6A8 /* BankAccountsView.swift */,
+				85B450FB2C84F61200E7E6A8 /* BankAccountDetailsView.swift */,
+				85B450FF2C879DB500E7E6A8 /* TmpData.swift */,
 			);
 			path = Heimilid;
 			sourceTree = "<group>";
@@ -103,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				85B450E82C7D374300E7E6A8 /* User.swift */,
+				85B450F72C834CF200E7E6A8 /* BankAccounts.swift */,
+				85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,13 +217,17 @@
 			files = (
 				85B450F22C7D384300E7E6A8 /* Btn.swift in Sources */,
 				85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */,
-				85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */,
 				85B450EA2C7D374300E7E6A8 /* User.swift in Sources */,
 				85B450CC2C7D31B500E7E6A8 /* ContentView.swift in Sources */,
+				85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */,
+				85B450F82C834CF200E7E6A8 /* BankAccounts.swift in Sources */,
 				85B450CA2C7D31B500E7E6A8 /* HeimilidApp.swift in Sources */,
+				85B450FC2C84F61200E7E6A8 /* BankAccountDetailsView.swift in Sources */,
 				85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */,
 				85B450EF2C7D37DA00E7E6A8 /* LoginViewModel.swift in Sources */,
+				85B451002C879DB500E7E6A8 /* TmpData.swift in Sources */,
 				85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */,
+				85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */,
 				85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

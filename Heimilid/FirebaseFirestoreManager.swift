@@ -64,7 +64,7 @@ extension FirebaseFirestoreManager {
       .addDocument(from: account, encoder: encoder)
   }
 
-  func fetchAccounts(for userId: String) async throws -> [BankAccount] {
+  func fetchAccounts(for userId: String) async throws {
     let snapshot = try await bankAccountCollection(userId).getDocuments()
     let documents = snapshot.documents
     var bankAccounts: [BankAccount] = []
@@ -82,7 +82,6 @@ extension FirebaseFirestoreManager {
       bankAccounts.append(bankAccount)
     }
     TmpData.shared.bankAccounts = bankAccounts
-    return bankAccounts
   }
 
   func createTransaction(_ transaction: BankAccountTransaction, for userId: String) async throws {
@@ -98,5 +97,7 @@ extension FirebaseFirestoreManager {
       .updateData(updatedAccountStatus)
     try bankAccountTransactionCollection(userId, documentID)
       .addDocument(from: transaction, encoder: encoder)
+
+    try await TmpData.shared.loadBankAccounts()
   }
 }

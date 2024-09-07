@@ -13,7 +13,6 @@ struct ContentView: View {
   @State private var title: String = ""
   @State private var number: String = ""
   @State private var type: BankAccount.AccountType = .checking
-  @State private var bankAccounts: [BankAccount] = []
 
   var body: some View {
     NavigationStack {
@@ -21,7 +20,7 @@ struct ContentView: View {
           // For testing purposes only - can be removed
 
         NavigationLink {
-          BankAccountsView(bankAccounts: $bankAccounts)
+          BankAccountsView()
         } label: {
           Text("Bankareikningar")
         }
@@ -77,15 +76,11 @@ struct ContentView: View {
         Divider()
         Button {
           Task {
-            guard let user = FirebaseAuthManager.shared.fetchSignedInUser() else {
-              print("Error fetching current user!")
-              return
+            do {
+              try await TmpData.shared.loadBankAccounts()
+            } catch let err {
+              print("Error fetching bank accounts: \(err.localizedDescription)")
             }
-            guard let bankAccounts = try? await FirebaseFirestoreManager.shared.fetchAccounts(for: user.uid) else {
-              print("Error fetching bank accounts")
-              return
-            }
-            self.bankAccounts = bankAccounts
           }
         } label: {
           Btn(label: "Endurhlaða gögnum")
@@ -106,15 +101,11 @@ struct ContentView: View {
     .padding()
     .onAppear {
       Task {
-        guard let user = FirebaseAuthManager.shared.fetchSignedInUser() else {
-          print("Error fetching current user!")
-          return
+        do {
+          try await TmpData.shared.loadBankAccounts()
+        } catch let err {
+          print("Error fetching bank accounts: \(err.localizedDescription)")
         }
-        guard let bankAccounts = try? await FirebaseFirestoreManager.shared.fetchAccounts(for: user.uid) else {
-          print("Error fetching bank accounts")
-          return
-        }
-        self.bankAccounts = bankAccounts
       }
     }
   }

@@ -11,12 +11,15 @@ import Firebase
 @main
 struct HeimilidApp: App {
 
-  @State private var isLoggedIn: Bool = false
+  @State private var isLoggedIn: Bool
 
   init() {
     FirebaseApp.configure()
-    if FirebaseAuthManager.shared.fetchSignedInUser() != nil {
+    FirebaseAuthManager.shared.fetchSignedInUser()
+    if TmpData.shared.user != nil {
       self.isLoggedIn = true
+    } else {
+      self.isLoggedIn = false
     }
   }
 

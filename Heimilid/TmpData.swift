@@ -13,4 +13,11 @@ final class TmpData {
 
   var user: Usr? = nil
   var bankAccounts: [BankAccount] = []
+
+  func loadBankAccounts() async throws {
+    guard let user = user else {
+      throw URLError(.unknown)
+    }
+    try await FirebaseFirestoreManager.shared.fetchAccounts(for: user.uid)
+  }
 }

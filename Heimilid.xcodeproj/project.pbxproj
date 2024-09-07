@@ -16,7 +16,6 @@
 		85B450DD2C7D324800E7E6A8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 85B450DC2C7D324800E7E6A8 /* FirebaseFirestore */; };
 		85B450DF2C7D338D00E7E6A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */; };
 		85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */; };
-		85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E42C7D364800E7E6A8 /* TmpStorage.swift */; };
 		85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */; };
 		85B450EA2C7D374300E7E6A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450E82C7D374300E7E6A8 /* User.swift */; };
 		85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450EB2C7D37DA00E7E6A8 /* LoginView.swift */; };
@@ -38,7 +37,6 @@
 		85B450D02C7D31B700E7E6A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
-		85B450E42C7D364800E7E6A8 /* TmpStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpStorage.swift; sourceTree = "<group>"; };
 		85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreManager.swift; sourceTree = "<group>"; };
 		85B450E82C7D374300E7E6A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		85B450EB2C7D37DA00E7E6A8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				85B450ED2C7D37DA00E7E6A8 /* Authentication */,
 				85B450E92C7D374300E7E6A8 /* Models */,
 				85B450E62C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift */,
-				85B450E42C7D364800E7E6A8 /* TmpStorage.swift */,
 				85B450E22C7D35FC00E7E6A8 /* FirebaseAuthManager.swift */,
 				85B450DE2C7D338D00E7E6A8 /* GoogleService-Info.plist */,
 				85B450C92C7D31B500E7E6A8 /* HeimilidApp.swift */,
@@ -220,7 +217,6 @@
 			files = (
 				85B450F22C7D384300E7E6A8 /* Btn.swift in Sources */,
 				85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */,
-				85B450E52C7D364800E7E6A8 /* TmpStorage.swift in Sources */,
 				85B450EA2C7D374300E7E6A8 /* User.swift in Sources */,
 				85B450CC2C7D31B500E7E6A8 /* ContentView.swift in Sources */,
 				85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */,

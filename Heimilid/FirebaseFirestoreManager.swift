@@ -13,10 +13,12 @@ final class FirebaseFirestoreManager {
 
   private let db: Firestore
   private let userCollection: CollectionReference
+  private let productCollection: CollectionReference
 
   private init() {
     db = Firestore.firestore()
     userCollection = db.collection("users")
+    productCollection = db.collection("vorur")
   }
 
   private let encoder: Firestore.Encoder = {
@@ -99,5 +101,30 @@ extension FirebaseFirestoreManager {
       .addDocument(from: transaction, encoder: encoder)
 
     try await TmpData.shared.loadBankAccounts()
+  }
+}
+
+// MARK: - Product Management
+extension FirebaseFirestoreManager {
+  func fetchAllProducts() async throws -> [Product] {
+    let snapshot = try await productCollection.getDocuments()
+    let documents = snapshot.documents
+    var products: [Product] = []
+    for document in documents {
+      let snapshotData = try document.data(as: Product.self, decoder: decoder)
+      guard let barcode = Int(document.documentID) else {
+        print("Sth not working")
+        continue
+      }
+      let product = Product(
+        snapshotData.heiti ?? "Innlestur vöruupplýsinga fór á villu",
+        strm: barcode,
+        flokkur: snapshotData.flokkur ?? "Óþekktur flokkur",
+        mynd: snapshotData.mynd ?? "https://res.cloudinary.com/dnbvbcokm/image/upload/v1727044840/spurningarmerki.jpg",
+        upplysingar: snapshotData.upplysingar ?? "Innlestur vöruupplýsinga fór á villu"
+      )
+      products.append(product)
+    }
+    return products
   }
 }

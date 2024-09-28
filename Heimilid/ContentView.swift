@@ -19,6 +19,14 @@ struct ContentView: View {
       VStack {
           // For testing purposes only - can be removed
 
+
+        NavigationLink {
+          ProductsListView()
+        } label: {
+          Btn(label: "Vörulistinn")
+        }
+
+
         NavigationLink {
           BankAccountsView()
         } label: {

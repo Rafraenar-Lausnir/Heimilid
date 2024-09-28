@@ -28,6 +28,13 @@
 		85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */; };
 		85B451002C879DB500E7E6A8 /* TmpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B450FF2C879DB500E7E6A8 /* TmpData.swift */; };
 		85B451022C8CD43D00E7E6A8 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B451012C8CD43D00E7E6A8 /* Errors.swift */; };
+		85B451052C8CDA5C00E7E6A8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B451042C8CDA5C00E7E6A8 /* View.swift */; };
+		85B451082C8CE91300E7E6A8 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B451072C8CE91300E7E6A8 /* EnvironmentValues.swift */; };
+		85B4510A2C8CEAA400E7E6A8 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B451092C8CEAA400E7E6A8 /* ButtonStyle.swift */; };
+		85B4510C2C8CEAEB00E7E6A8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4510B2C8CEAEB00E7E6A8 /* Button.swift */; };
+		85B748902CA0BDAB007C864B /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B7488F2CA0BDAB007C864B /* ProductsListView.swift */; };
+		85B748922CA0BDE1007C864B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B748912CA0BDE1007C864B /* Product.swift */; };
+		85B748942CA0CE6D007C864B /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B748932CA0CE6D007C864B /* ProductDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTransaction.swift; sourceTree = "<group>"; };
 		85B450FF2C879DB500E7E6A8 /* TmpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpData.swift; sourceTree = "<group>"; };
 		85B451012C8CD43D00E7E6A8 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		85B451042C8CDA5C00E7E6A8 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		85B451072C8CE91300E7E6A8 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
+		85B451092C8CEAA400E7E6A8 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		85B4510B2C8CEAEB00E7E6A8 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		85B7488F2CA0BDAB007C864B /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
+		85B748912CA0BDE1007C864B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		85B748932CA0CE6D007C864B /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +99,8 @@
 		85B450C82C7D31B500E7E6A8 /* Heimilid */ = {
 			isa = PBXGroup;
 			children = (
+				85B7488E2CA0BD98007C864B /* Products */,
+				85B451032C8CDA4400E7E6A8 /* Extensions */,
 				85B451012C8CD43D00E7E6A8 /* Errors.swift */,
 				85B450F32C7D396D00E7E6A8 /* ValidationManager.swift */,
 				85B450F12C7D384300E7E6A8 /* Components */,
@@ -118,6 +134,7 @@
 				85B450E82C7D374300E7E6A8 /* User.swift */,
 				85B450F72C834CF200E7E6A8 /* BankAccounts.swift */,
 				85B450FD2C86647700E7E6A8 /* BankAccountTransaction.swift */,
+				85B748912CA0BDE1007C864B /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +154,26 @@
 				85B450F02C7D384300E7E6A8 /* Btn.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		85B451032C8CDA4400E7E6A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85B451042C8CDA5C00E7E6A8 /* View.swift */,
+				85B451072C8CE91300E7E6A8 /* EnvironmentValues.swift */,
+				85B451092C8CEAA400E7E6A8 /* ButtonStyle.swift */,
+				85B4510B2C8CEAEB00E7E6A8 /* Button.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85B7488E2CA0BD98007C864B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85B7488F2CA0BDAB007C864B /* ProductsListView.swift */,
+				85B748932CA0CE6D007C864B /* ProductDetailsView.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,21 +255,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B748902CA0BDAB007C864B /* ProductsListView.swift in Sources */,
+				85B451052C8CDA5C00E7E6A8 /* View.swift in Sources */,
 				85B450F22C7D384300E7E6A8 /* Btn.swift in Sources */,
 				85B451022C8CD43D00E7E6A8 /* Errors.swift in Sources */,
 				85B450E32C7D35FC00E7E6A8 /* FirebaseAuthManager.swift in Sources */,
 				85B450EA2C7D374300E7E6A8 /* User.swift in Sources */,
+				85B4510C2C8CEAEB00E7E6A8 /* Button.swift in Sources */,
 				85B450CC2C7D31B500E7E6A8 /* ContentView.swift in Sources */,
 				85B450FA2C83974D00E7E6A8 /* BankAccountsView.swift in Sources */,
 				85B450F82C834CF200E7E6A8 /* BankAccounts.swift in Sources */,
 				85B450CA2C7D31B500E7E6A8 /* HeimilidApp.swift in Sources */,
 				85B450FC2C84F61200E7E6A8 /* BankAccountDetailsView.swift in Sources */,
 				85B450EE2C7D37DA00E7E6A8 /* LoginView.swift in Sources */,
+				85B451082C8CE91300E7E6A8 /* EnvironmentValues.swift in Sources */,
 				85B450EF2C7D37DA00E7E6A8 /* LoginViewModel.swift in Sources */,
 				85B451002C879DB500E7E6A8 /* TmpData.swift in Sources */,
 				85B450E72C7D36E500E7E6A8 /* FirebaseFirestoreManager.swift in Sources */,
+				85B748942CA0CE6D007C864B /* ProductDetailsView.swift in Sources */,
+				85B4510A2C8CEAA400E7E6A8 /* ButtonStyle.swift in Sources */,
 				85B450FE2C86647700E7E6A8 /* BankAccountTransaction.swift in Sources */,
 				85B450F42C7D396D00E7E6A8 /* ValidationManager.swift in Sources */,
+				85B748922CA0BDE1007C864B /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

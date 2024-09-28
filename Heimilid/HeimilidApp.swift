@@ -25,11 +25,12 @@ struct HeimilidApp: App {
 
   var body: some Scene {
     WindowGroup {
-      if isLoggedIn {
-        ContentView(isLoggedIn: $isLoggedIn)
-      } else {
-        LoginView(isLoggedIn: $isLoggedIn)
-      }
+      ContentView(isLoggedIn: $isLoggedIn)
+//      if isLoggedIn {
+//        ContentView(isLoggedIn: $isLoggedIn)
+//      } else {
+//        LoginView(isLoggedIn: $isLoggedIn)
+//      }
     }
   }
 }
